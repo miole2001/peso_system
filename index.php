@@ -18,10 +18,10 @@
     
             if ($row["userType"] == "peso_user") {
                 $_SESSION['id'] = $row['id'];
-                $_SESSION["email"] = $email;
+                $_SESSION["email"] = $row['email'];
                 header("location: /peso_system/user/user_dashboard.php");
             } else {
-                $_SESSION["email"] = $email;
+                $_SESSION["email"] = $row['email'];
                 header("location: /peso_system/admin/admin_dashboard.php");
             }
         } 
